@@ -13,6 +13,7 @@
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
+			position: relative;
 		}
 		form {
 			background-color: white;
@@ -22,8 +23,11 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			position: absolute;
+			top: 20px;
+			right: 20px;
 		}
-		input {
+		input[type="text"] {
 			margin: 10px;
 			padding: 10px;
 			border-radius: 5px;
@@ -43,16 +47,29 @@
 			font-size: 18px;
 			cursor: pointer;
 		}
+		.sentence-input {
+			margin: 50px auto;
+			display: block;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px rgba(0,0,0,0.3);
+			font-size: 18px;
+			width: 100%;
+			max-width: 800px;
+			height: 200px;
+			resize: none;
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
 	<form>
-		<h2>Login/Register</h2>
 		<input type="text" placeholder="Email">
 		<input type="password" placeholder="Password">
 		<button>Login</button>
 		<p>Don't have an account? <a href="#">Register now</a></p>
 	</form>
-	<textarea rows="10" placeholder="Type your text here"></textarea>
+	<input type="text" class="sentence-input" placeholder="Type a sentence here...">
 </body>
 </html>
