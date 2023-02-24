@@ -1,86 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login/Register</title>
-    <style>
-        body {
-            background-image: url("justice-theme-image.jpg");
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-        }
-        form {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        input[type="text"] {
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            box-shadow: 0 0 5px rgba(0,0,0,0.3);
-            font-size: 18px;
-            width: 100%;
-            max-width: 500px;
-        }
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        .sentence-input {
-            margin: 50px auto;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            box-shadow: 0 0 5px rgba(0,0,0,0.3);
-            font-size: 18px;
-            width: 100%;
-            max-width: 800px;
-            height: 200px;
-            resize: none;
-            text-align: center;
-        }
-        .submit-button {
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-        }
-    </style>
+	<title>My Text Transformer</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: white;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			border-radius: 5px;
+			position: relative;
+			top: 50px;
+		}
+		h1 {
+			font-size: 36px;
+			margin-top: 0;
+		}
+		p {
+			font-size: 18px;
+		}
+		input[type="text"] {
+			width: 100%;
+			font-size: 18px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+		}
+		button {
+			background-color: #007bff;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
-    <form>
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button>Login</button>
-        <p>Don't have an account? <a href="#">Register now</a></p>
-    </form>
-    <input type="text" class="sentence-input" placeholder="Type a sentence here...">
-    <button class="submit-button">Submit</button>
+	<div class="container">
+		<h1>My Text Transformer</h1>
+		<p>Enter your text below:</p>
+		<input type="text" id="input-text" placeholder="Enter your text here...">
+		<button id="transform-btn">Transform</button>
+		<p>Transformed text:</p>
+		<p id="output-text"></p>
+	</div>
+	<script>
+		// Get the input and output text elements
+		const inputText = document.getElementById("input-text");
+		const outputText = document.getElementById("output-text");
+
+		// Add event listener to the transform button
+		document.getElementById("transform-btn").addEventListener("click", function() {
+			// Get the input text and transform it
+			const transformedText = transformText(inputText.value);
+			// Update the output text element
+			outputText.textContent = transformedText;
+		});
+
+		// Function to transform the input text
+		function transformText(input) {
+			// Implement your custom text transformation logic here
+			// For this example, we'll just convert the text to all uppercase
+			return input.toUpperCase();
+		}
+	</script>
 </body>
 </html>
