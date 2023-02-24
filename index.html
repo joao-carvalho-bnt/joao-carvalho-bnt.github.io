@@ -1,92 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>LingoJam Clone</title>
-    <style>
-      /* Reset the default styles of the page */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      /* Set the background color and font for the page */
-      body {
-        background-color: #f1f1f1;
-        font-family: sans-serif;
-      }
-
-      /* Style the header of the page */
-      header {
-        background-color: #fff;
-        border-bottom: 1px solid #ccc;
-        padding: 20px;
-        text-align: center;
-      }
-
-      /* Style the main content of the page */
-      main {
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: 20px;
-        padding: 20px;
-      }
-
-      /* Style the input fields */
-      input[type="text"] {
-        border: none;
-        border-bottom: 1px solid #ccc;
-        font-size: 16px;
-        margin-bottom: 20px;
-        padding: 10px;
-        width: 100%;
-      }
-
-      /* Style the "Translate" button */
-      button {
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 20px;
-        padding: 10px 20px;
-      }
-
-      /* Style the output area */
-      textarea {
-        border: none;
-        font-size: 16px;
-        margin-top: 20px;
-        padding: 10px;
-        resize: none;
-        width: 100%;
-      }
-
-      /* Style the footer of the page */
-      footer {
-        background-color: #fff;
-        border-top: 1px solid #ccc;
-        padding: 20px;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>LingoJam Clone</h1>
-    </header>
-    <main>
-      <form>
-        <input type="text" placeholder="Enter text here...">
-        <button>Translate</button>
-      </form>
-      <textarea placeholder="Translated text will appear here..." readonly></textarea>
-    </main>
-    <footer>
-      <p>&copy; 2023 LingoJam Clone</p>
-    </footer>
-  </body>
+<head>
+	<title>My Page</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-image: url("background-image.jpg");
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 50px;
+			text-align: center;
+		}
+		h1 {
+			font-size: 4rem;
+			font-weight: bold;
+			color: #fff;
+			margin: 0;
+			padding: 0;
+			text-shadow: 0 0 10px rgba(0,0,0,0.5);
+		}
+		p {
+			font-size: 2rem;
+			color: #fff;
+			margin: 50px 0;
+			line-height: 1.5;
+			text-shadow: 0 0 10px rgba(0,0,0,0.5);
+		}
+		button {
+			background-color: #ff6600;
+			color: #fff;
+			font-size: 1.5rem;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		button:hover {
+			background-color: #e55900;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>My Title</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula ligula nec nunc sagittis, et aliquet velit rutrum.</p>
+		<button>Learn More</button>
+	</div>
+</body>
 </html>
